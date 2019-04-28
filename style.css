@@ -1,0 +1,241 @@
+html,body {
+  margin : 0;
+  padding: 0;
+}
+/* header */
+
+header {
+    background-color: rgb(183, 252, 176);
+    width: 100%;
+    padding: 15px 0 15px 0;
+    text-align: center;
+}
+
+h1 {
+    width: 325px;
+    font-family: "Amatic SC", serif;
+    font-size: 60px;
+    display: inline-block;
+    margin: auto;
+
+}
+
+h1:active {
+    position: relative;
+    top: 3px;
+}
+
+.icones {
+    vertical-align: top;
+    width: 300px;
+    display: inline-block;
+
+}
+
+.icones .fa, .icones2 .fa {
+    padding: 15px;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    margin: 12px;
+
+}
+
+.icones .fa:active, .icones2.fa:active, .icones3 .fa:active {
+    position: relative;
+    top: 5px;
+}
+
+.icones a, .icones2 a {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover {
+    opacity: 0.7 ;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+/*Main page */
+.main a {
+  text-decoration: none;
+  width: 95px;
+}
+
+.main a:hover, .more:hover {
+  transition: transform linear 0.3s;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.main a:active {
+  position: relative;
+  top: 3px;
+}
+
+.more {
+  width : 75px;
+  padding: 10px;
+  border-radius : 3px;
+  background-color: black;
+  color : white;
+  margin: 10px auto;
+}
+
+
+
+/*article*/
+
+.main {
+  width: 100%;
+}
+
+
+.article {
+  width: 900px;
+  margin: 150px auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px auto;
+  width: 850px;
+}
+
+.img1 {
+  width: 300px;
+  height: auto;
+}
+
+.right {
+  width: 500px;
+  text-align: justify;
+}
+
+.top h2, .top h5 {
+  margin: 0;
+}
+
+.texte1, .texte2 {
+  text-align: justify;
+}
+
+.images {
+  margin : 50px auto;
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.images img {
+  width: 360px;
+}
+
+.signature {
+  float: right;
+  font-weight: 700;
+}
+
+/* commentaires */
+
+.comments, .commentForm, .comment {
+  width: 900px;
+  margin : 50px auto;
+}
+
+.commentForm textarea {
+  width: 850px;
+  margin: 20px auto;
+  height: 250px;
+  box-sizing: border-box;
+  border: 2px solid #C6C6C6;
+  padding : 10px;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  resize: none;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+
+/*Formulaire article*/
+
+.articleForm {
+  margin: 100px auto;
+  width: 900px;
+  text-align: center;
+}
+
+.articleForm input, .articleForm textarea  {
+  width: 600px;
+  margin: 20px auto;
+  min-height: 50px;
+}
+
+.resumeInput {
+  height: 150px;
+  padding: 0;
+}
+
+.articleForm textarea  {
+  width: 620px;
+  box-sizing: border-box;
+  border: 2px solid #C6C6C6;
+  padding : 10px;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  resize: none;
+}
+
+.textInput {
+  height: 300px;
+}
+
+
+
+
+/*footer*/
+
+footer {
+    background-color: rgb(183, 252, 176);
+    width: 100%;
+    margin-top: 100px;
+}
+
+.end {
+    margin: auto;
+    width: 630px;
+}
+
+footer p {
+    width: 360px;
+    display: inline-block;
+    font-size: 10px;
+    padding : 5px;
+    margin-left: 50px;
+
+}
+
+footer .icones3{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.icones3 .fa {
+    text-align: center;
+    font-size: 20px;
+    width: 15px;
+    height: 15px;
+    margin: 15px;
+}
