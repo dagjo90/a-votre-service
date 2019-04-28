@@ -1,5 +1,5 @@
 <?php
-require "config.php";
+require "../config.php";
 
 
 try {
@@ -17,6 +17,6 @@ $user->createUser($_POST['pseudo'], $_POST['email'], $_POST['password']);
 }
 
 
-header("Location: index.php");
+header("Location: ../index.php");
 die;
 ?>

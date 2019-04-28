@@ -29,7 +29,7 @@ session_start();
 
 ?>
 
-<form class="modifyComment" method="POST" action="<?php echo "updateComment.php?id=".$id."&article_id=". $article_id . "\""?>">
+<form class="modifyComment" method="POST" action="<?php echo "./controllers/updateComment.php?id=".$id."&article_id=". $article_id . "\""?>">
   <textarea name="content"><?php echo $comment['content']; ?> </textarea>
   <input type="submit" />
 </form>

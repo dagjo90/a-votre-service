@@ -34,7 +34,7 @@ $sessionUser = $user_model->getUser($_SESSION['id']);
   $comments = $comment_model->getAllCommentsFromArticle($id);
 
   if (isset($_SESSION['id']) && $sessionUser['isAdmin'] == 1) {
-    echo "<a href=\"deleteArticle.php?id=".$article['id']. "\"><button> X </button> </a>";
+    echo "<a href=\"./controllers/deleteArticle.php?id=".$article['id']. "\"><button> X </button> </a>";
     echo "<a href=\"modifyArticle.php?id=". $article['id'] . "\"><button> modify article</button> </a>";
   }
 
@@ -87,7 +87,7 @@ $sessionUser = $user_model->getUser($_SESSION['id']);
 
 
     if (isset($_SESSION['id']) && isset($_SESSION['id']) && $_SESSION['id'] === $user['id'] || isset($_SESSION['id']) && $sessionUser['isAdmin'] == 1){
-      echo "<a href=\"deleteComment.php?id=".$comment['id']. "&article_id=". $article['id'] . "\"><button > X </button> </a>";
+      echo "<a href=\"./controllers/deleteComment.php?id=".$comment['id']. "&article_id=". $article['id'] . "\"><button > X </button> </a>";
       echo "<a href=\"modifyComment.php?id=".$comment['id']. "&article_id=". $article['id'] . "\"><button > modify </button> </a>";
     }
 
@@ -104,7 +104,7 @@ $sessionUser = $user_model->getUser($_SESSION['id']);
   ?>
 </div>
 
-<form class="commentForm" action="submitComment.php" method="post">
+<form class="commentForm" action="./controllers/submitComment.php" method="post">
   <textarea name="content"> </textarea>
   <input type="hidden" name="article_id" value ="<?php echo $article['id']; ?>"/>
   <input type="submit" />

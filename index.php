@@ -7,7 +7,7 @@ if (isset($_SESSION['id'])) {
 	 $user_model = new User();
 	 $sessionUser = $user_model->getUser($_SESSION['id']);
 	 echo "Welcome back <b>" .$sessionUser['pseudo'] . "</b> !
-	 <br /> To log out click <a href=\"logOut.php\">here</a>
+	 <br /> To log out click <a href=\"./controllers/logOut.php\">here</a>
 	 <br /> To modify your profile click <a href=\"modifyProfile.php\">here</a>";
  } else {
 	 echo "you're not connected, please register or connect <a href=\"register.php\">here</a";
@@ -36,7 +36,7 @@ if (isset($_SESSION['id'])) {
 <body>
 
 <header>
-	<h1><a href="index.php">À votre service</a></h1>
+	<h1><a href="./index.php">À votre service</a></h1>
 <div class="icones">
     <a href="https://www.instagram.com/"  class="fa fa-instagram" target="_blank"></a>
     <a href="https://www.youtube.com/" class="fa fa-youtube-play" target="_blank"></a>
@@ -58,7 +58,7 @@ if (isset($_SESSION['id'])) {
           . $article['accroche'] . "
           </p>
 
-					<a  href=\"article.php?id=".$article['id'] . "\"><p class=\"more\"> Lire plus </p></a>
+					<a  href=\"./article.php?id=".$article['id'] . "\"><p class=\"more\"> Lire plus </p></a>
 			</div>
 		</div>
 

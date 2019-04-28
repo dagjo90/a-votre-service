@@ -29,7 +29,7 @@ $sessionUser = $user_model->getUser($_SESSION['id']);
   $article = $article_model-> getArticle($id);
 ?>
 
-  <form method="post" class="articleForm" action="<?php echo "updateArticle.php?id=".$id?>" >
+  <form method="post" class="articleForm" action="<?php echo "./controllers/updateArticle.php?id=".$id?>" >
     <input class="titreInput" type="text" name ="titre" placeholder="Titre" value="<?php echo $article['titre'];?>"/>
     <input class="photoInput" type="text" name="photo1" placeholder="Photo 1" value="<?php echo $article['photo1'];?>"/>
     <input class="tagsInput" type="text" name="tags" placeholder="Tags" value="<?php echo $article['tags'];?>"/>

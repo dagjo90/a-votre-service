@@ -1,5 +1,5 @@
 <?php
-require "config.php";
+require "../config.php";
 session_start();
 $comment = new Comment();
 $user_model = new User();
@@ -20,6 +20,6 @@ if (isset($_GET['id'])) {
 
 }
 
-header("Location: index.php");
+header("Location: ../index.php");
 die;
 ?>

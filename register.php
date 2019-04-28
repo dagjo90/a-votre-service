@@ -20,14 +20,14 @@
 <div class="main">
 
 
-  <form class="loginForm" method="post" action="login.php">
+  <form class="loginForm" method="post" action="./controllers/login.php">
     <input type="text" placeholder="e-mail" name="email"/>
     <input type="password" placeholder="password" name="password"/>
     <input type="submit" />
   </form>
 
 
-<form class="registerForm" method="post" action="createUser.php">
+<form class="registerForm" method="post" action="./controllers/createUser.php">
   <input type="text" placeholder="Pseudo" name="pseudo"/>
   <input type="text" placeholder="e-mail" name="email"/>
   <input type="password" placeholder="password" name="password"/>

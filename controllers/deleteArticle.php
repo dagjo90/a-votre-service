@@ -1,5 +1,5 @@
 <?php
-require "config.php";
+require "../config.php";
 
 $id = $_GET['id'];
 
@@ -11,6 +11,6 @@ $article = new Article();
 $article->deleteArticle($id);
 
 
-header("Location: index.php");
+header("Location: ../index.php");
 die;
 ?>

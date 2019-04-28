@@ -24,7 +24,7 @@
 <div class="main">
 
 
-<form class="registerForm" method="post" action="updateUser.php">
+<form class="registerForm" method="post" action="./controllers/updateUser.php">
   <input type="text" placeholder="Pseudo" name="pseudo" value="<?php echo  $sessionUser['pseudo']; ?>"/>
   <input type="text" placeholder="e-mail" name="email" value="<?php echo  $sessionUser['email']; ?>"/>
   <input type="password" placeholder="Enter new password" name="password"/>
@@ -34,7 +34,7 @@
 </form>
 <?php
 if (!$sessionUser['isAdmin']) {
-echo " <a href=\"deleteProfile.php\"><button>Delete Profile</button></a> ";
+echo " <a href=\"./controllers/deleteProfile.php\"><button>Delete Profile</button></a> ";
 } else if ($sessionUser['isAdmin']) {
 $user_model = new User();
 $users = $user_model->getAllUsers();
@@ -42,7 +42,7 @@ foreach ($users as $user) {
 
 if (!$user['isAdmin']) {
 
-echo "<br><br> ".$user['pseudo'] . " <a href=\"deleteProfile.php?id=" . $user['id'] . "\"><button>Delete Profile</button></a> <br>";
+echo "<br><br> ".$user['pseudo'] . " <a href=\"./controllers/deleteProfile.php?id=" . $user['id'] . "\"><button>Delete Profile</button></a> <br>";
 }}}
 
 $comment_model = new Comment();
@@ -55,11 +55,11 @@ $article = $article_model-> getArticle($comment['article_id']);
 
 
 echo "<div class=\"comment\">
-<a href=\"deleteComment.php?id=".$comment['id']. "&article_id=". $comment['article_id'] . "\"><button > X </button> </a>
+<a href=\"./controllers/deleteComment.php?id=".$comment['id']. "&article_id=". $comment['article_id'] . "\"><button > X </button> </a>
 <a href=\"modifyComment.php?id=".$comment['id']. "&article_id=". $comment['article_id'] . "\"><button > modify </button> </a>
 
 <h4 class=\"commentAuthor\">". $sessionUser['pseudo'] . "</h4>
-<a href=\"article.php?id=".$article['id'] . "\"><h4 class=\"commentAuthor\">". $article['titre'] . "</h4></a>
+<a href=\"./article.php?id=".$article['id'] . "\"><h4 class=\"commentAuthor\">". $article['titre'] . "</h4></a>
 <p class=\"commentContent\">" .
 $comment['content'] ."
 </p>
