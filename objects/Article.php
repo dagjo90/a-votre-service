@@ -2,12 +2,12 @@
 
 class Article extends Model {
 
-  public function createArticle($photo1, $titre, $tags, $accroche, $texte1, $photo2, $photo3, $texte2) {
+  public function createArticle($photo1, $titre, $tags, $accroche, $texte1, $photo2, $photo3, $texte2,$type) {
     if ($this -> connectDB) {
       try {
         $sql = 'INSERT INTO articles
-                (`photo1`, `titre`, `date`, `tags`, `accroche`, `texte1`, `photo2`, `photo3`, `texte2`, `signature`)
-                VALUES (?,?,?,?,?,?,?,?,?,?)';
+                (`photo1`, `titre`, `date`, `tags`, `accroche`, `texte1`, `photo2`, `photo3`, `texte2`, `signature`, `type`)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?)';
         $pdoStmnt = $this-> connectDB -> prepare( $sql);
         $pdoStmnt -> execute ( [
           $photo1,
@@ -20,6 +20,7 @@ class Article extends Model {
           $photo3,
           $texte2,
           "Ann-so.",
+          $type,
         ]);
         return true;
       } catch (\PDOException $e) {
@@ -34,7 +35,7 @@ class Article extends Model {
   public function getAllArticles () {
       if ( $this -> connectDB ) {
           try {
-              $sql = 'SELECT * FROM articles';
+              $sql = 'SELECT * FROM articles ORDER BY id DESC';
               $pdoStmnt = $this -> connectDB -> prepare( $sql );
               $pdoStmnt -> execute();
               return $pdoStmnt -> fetchAll();

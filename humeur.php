@@ -53,7 +53,7 @@ if (isset($_SESSION['id'])) {
 
 <?php foreach($articles as $article) {
 
-  if ($article['type'] == "aVotreService") {
+  if ($article['type'] == "humeur") {
   echo "
 		<div class=\"article\">
 		<div class=\"top\">

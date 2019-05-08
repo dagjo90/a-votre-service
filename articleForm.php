@@ -33,6 +33,13 @@
     <input class="photoInput" type="text" name="photo2" placeholder="Photo 2"/>
     <input class="photoInput" type="text" name="photo3" placeholder="Photo 3"/>
     <textarea class="textInput" type="text" name="texte2" placeholder="Texte 2"/></textarea>
+<br />
+		<select name="type">
+			<option value = ""> Type d'article </option>
+			<option value = "aVotreService"> A votre service </option>
+			<option value = "humeur"> Billet d'humeur </option>
+		</select>
+		<br />
     <input class="submitArticle" type="submit"/>
 
 
