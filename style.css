@@ -2,22 +2,23 @@ html,body {
   margin : 0;
   padding: 0;
 }
+
+
 /* header */
 
 header {
-    background-color: rgb(183, 252, 176);
     width: 100%;
-    padding: 15px 0 15px 0;
     text-align: center;
+    padding-top: 15px;
 }
 
 h1 {
-    width: 325px;
-    font-family: "Amatic SC", serif;
-    font-size: 60px;
+    width: 800px;
+    font-size: 85px;
     display: inline-block;
     margin: auto;
-
+    font-family: "Amatic SC", serif;
+    color: white;
 }
 
 h1:active {
@@ -25,11 +26,30 @@ h1:active {
     top: 3px;
 }
 
-.icones {
-    vertical-align: top;
-    width: 300px;
-    display: inline-block;
+.adminMenu {
+  width: 502px;
+  float: left;
+  background-color: black;
+  text-align: left;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
+.adminArticle {
+  width: 400px;
+  margin-top : 25px;
+  margin-left: 25px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.icones {
+    vertical-align: bottom;
+    width: 350px;
+    display: inline-block;
 }
 
 .icones .fa, .icones2 .fa {
@@ -39,7 +59,6 @@ h1:active {
     height: 25px;
     text-align: center;
     margin: 12px;
-
 }
 
 .icones .fa:active, .icones2.fa:active, .icones3 .fa:active {
@@ -49,13 +68,12 @@ h1:active {
 
 .icones a, .icones2 a {
     text-decoration: none;
-    color: black;
+    color: white;
 
 }
 
-a:hover {
-    opacity: 0.7 ;
-
+header a {
+color: white;
 }
 
 a {
@@ -65,15 +83,157 @@ a {
 }
 
 /*Main page */
+
+.splashinfos {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./img/splash.jpg");
+
+}
+
+.splashinfos .filter {
+  background-color: rgba(0,0,0,0.3);
+  height: 100%;
+  width: 100%;
+  font-family: "News cycle", serif;
+}
+
+.splashinfos .filter p {
+  text-align: center;
+  width: 500px;
+  color: white;
+  padding-top: 10%;
+  margin: 0 auto;
+  font-family: "News cycle", serif;
+  letter-spacing: 4px;
+  font-size: 45px;
+}
+
+.admin, .adminMenu span{
+  font-size: 25px;
+  color: white;
+  font-family: "News cycle", serif;
+}
+
+.splashinfos span {
+  color: white;
+  font-family: "News cycle", serif;
+}
+
+.nav {
+  color: white;
+  height: 100%;
+  width: 400px;
+  transition: right linear 1s;
+  background-color: black;
+  position: fixed;
+  right: -400px;
+  z-index: 1;
+
+}
+
+.nav2 {
+  color: white;
+  height: 100%;
+  width: 350px;
+  transition: right linear 1s;
+  background-color: black;
+  position: fixed;
+  right: 0px;
+  z-index: 1;
+}
+
+.navContainer {
+  width: 250px;
+  margin: 100px auto;
+  font-family: "News Cycle", serif;
+}
+
+.nav h3, .nav2 h3, .nav h3 a, .nav2 h3 a{
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+.nav ul, .nav2 ul {
+list-style: none;
+width: 300px;
+margin : 10px auto;
+padding: 0;
+}
+
+.nav a, .nav2 a{
+  color: white;
+  text-decoration: none;
+
+}
+.navContainer h4 {
+  margin-top: 50px;
+}
+
+#closeMenu {
+  float: right;
+  padding: 25px;
+}
+
+#buttonMenu, #closeMenu {
+  border: none;
+  background: none;
+	color: white;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+#submitLogin:hover, .admin:hover, .splashinfos .filter .headerMore p:hover, .nav a:hover, .nav2 a:hover, #buttonMenu:hover, #closeMenu:hover, header a:hover {
+  color : rgba(255,255,255,0.7);
+  transition: color linear 0.2s;
+  transition: transform linear 0.3s;
+  transform: scale(1.3);
+}
+
+#submitLogin:active, .admin:active, .splashinfos .filter .headerMore p:active , .nav a:active, .nav2 a:active, #buttonMenu:active, #closeMenu:active, header a:active {
+position: relative;
+top: 3px;
+
+}
+
 .main a {
   text-decoration: none;
   width: 95px;
+  box-shadow: none;
+
+
+}
+
+.splashinfos .filter .headerMore p {
+ padding-top: 0;
+ margin-top: 100px;
+ background-color: #F7A24D;
+ padding: 10px 0;
+ border-radius: 5px;
+ width: 150px;
+ text-align: center;
+ font-size: 20px;
+}
+
+
+.more {
+  width : 104px;
+  padding: 10px;
+  border-radius : 3px;
+  background-color: black;
+  color : white;
+  margin: 50px auto;
+  border-radius: 5%;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 
 .main a:hover, .more:hover {
   transition: transform linear 0.3s;
   transform: scale(1.1);
-  opacity: 1;
+
 }
 
 .main a:active {
@@ -81,16 +241,17 @@ a {
   top: 3px;
 }
 
-.more {
-  width : 75px;
-  padding: 10px;
-  border-radius : 3px;
-  background-color: black;
-  color : white;
-  margin: 10px auto;
+.color1, .color2 {
+
+  padding: 250px 0;
+  -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+  clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
 }
 
-
+.color1 {
+  background-color: #232830;
+  color : silver;
+}
 
 /*article*/
 
@@ -98,23 +259,26 @@ a {
   width: 100%;
 }
 
-
 .article {
   width: 900px;
-  margin: 150px auto;
+  margin: 0 auto;
+  font-family: "News cycle", serif;
+  line-height: 30px;
+  font-size: 20px;
 }
 
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px auto;
+  margin: 0 auto;
   width: 850px;
 }
 
 .img1 {
   width: 300px;
   height: auto;
+  border-radius: 5%;
 }
 
 .right {
@@ -148,25 +312,18 @@ a {
 
 /* commentaires */
 
-.comments, .commentForm, .comment {
+.comments {
   width: 900px;
   margin : 50px auto;
-}
-
-.commentForm textarea {
-  width: 850px;
-  margin: 20px auto;
-  height: 250px;
-  box-sizing: border-box;
-  border: 2px solid #C6C6C6;
-  padding : 10px;
+  background-color: white;
+  padding: 25px;
+  border: 2px solid silver;
   border-radius: 5px;
-  background-color: #FBFBFB;
-  resize: none;
-  font-size: 17px;
-  line-height: 21px;
 }
 
+.comments h2 {
+  color: black;
+}
 
 /*Formulaire article*/
 
@@ -202,14 +359,48 @@ a {
 }
 
 
+/* Page Login */
 
+
+.loginForm {
+  width: 500px;
+  margin: 150px auto;
+  font-family: "Amatic SC", serif;
+}
+
+.loginForm input {
+  width: 500px;
+  margin : 10px auto;
+  height: 50px;
+  font-family: "Amatic SC", serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#submitLogin {
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  color: white;
+  background-color: #F7A24D;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 150px;
+  float: right;
+}
+
+#loginHeader {
+  font-size: 40px;
+}
 
 /*footer*/
 
 footer {
-    background-color: rgb(183, 252, 176);
+    background-color: black;
+    color: white;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 250px;
 }
 
 .end {
@@ -223,13 +414,13 @@ footer p {
     font-size: 10px;
     padding : 5px;
     margin-left: 50px;
-
 }
 
 footer .icones3{
     display: inline-block;
     width: 200px;
     text-align: center;
+    color: white;
 }
 
 .icones3 .fa {
@@ -238,4 +429,5 @@ footer .icones3{
     width: 15px;
     height: 15px;
     margin: 15px;
+    color: white;
 }

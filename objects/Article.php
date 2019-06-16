@@ -35,7 +35,7 @@ class Article extends Model {
   public function getAllArticles () {
       if ( $this -> connectDB ) {
           try {
-              $sql = 'SELECT * FROM articles ORDER BY id DESC';
+              $sql = 'SELECT * FROM articles ORDER BY id';
               $pdoStmnt = $this -> connectDB -> prepare( $sql );
               $pdoStmnt -> execute();
               return $pdoStmnt -> fetchAll();

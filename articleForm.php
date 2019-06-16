@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="style.css" type="text/css" rel="stylesheet">
-	<title>Blog</title>
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<?php include "header.php";
 
-<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Comfortaa|Homemade+Apple|Marck+Script|Open+Sans+Condensed:300" rel="stylesheet">
+	if (!isset($_SESSION['id'])) {
+		header('Location: index.php');
+	}
 
-</head>
-<body>
 
-<header>
-	<h1><a href="index.php">Mon Blog</a></h1>
-<div class="icones">
-    <a href="https://www.instagram.com/"  class="fa fa-instagram" target="_blank"></a>
-    <a href="https://www.youtube.com/" class="fa fa-youtube-play" target="_blank"></a>
-    <a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a>
-    </div>
-</header>
-
-<div class="main">
+	?>
   <form method="post" class="articleForm" action="./controllers/submitArticle.php">
     <input class="titreInput" type="text" name ="titre" placeholder="Titre"/>
     <input class="photoInput" type="text" name="photo1" placeholder="Photo 1"/>
@@ -44,7 +26,4 @@
 
 
   </form>
-</div>
-
-</body>
-</html>
+	<?php include "footer.php"?>

@@ -1,28 +1,6 @@
 <?php
-require "config.php";
-session_start();
-$user_model = new User();
-if (isset($_SESSION['id'])) {
-$sessionUser = $user_model->getUser($_SESSION['id']);
-}
- ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="style.css" type="text/css" rel="stylesheet">
-	<title>À votre service</title>
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Comfortaa|Homemade+Apple|Marck+Script|Open+Sans+Condensed:300" rel="stylesheet">
-</head>
-<body>
-
-<div class="main">
+include "header.php";
+?>
 
   <?php
   $id = $_GET['id'];
@@ -34,15 +12,24 @@ $sessionUser = $user_model->getUser($_SESSION['id']);
   $comments = $comment_model->getAllCommentsFromArticle($id);
 
   if (isset($_SESSION['id']) && $sessionUser['isAdmin'] == 1) {
-    echo "<a href=\"./controllers/deleteArticle.php?id=".$article['id']. "\"><button> X </button> </a>";
-    echo "<a href=\"modifyArticle.php?id=". $article['id'] . "\"><button> modify article</button> </a>";
+    echo "<div class=\"adminArticle\">";
+
+    echo "<a class=\"admin\" href=\"./controllers/deleteArticle.php?id=".$article['id']. "\">Supprimer l'article | </a>";
+    echo "<a class=\"admin\" href=\"modifyArticle.php?id=". $article['id'] . "\">Modifier l'article</a>";
+    echo "</div>";
   }
 
   echo "
+  <div class=\"color2\">
+
+
     <div class=\"article\">
-    <div class=\"top\">
-      <img class=\"img1\" src=\"./img/" . $article['photo1'] . "\" />
-      <div class=\"right\">
+    <div class=\"top\">";
+
+    if ($article['photo1'] !== "") {
+      echo "<img class=\"img1\" src=\"./img/" . $article['photo1'] . "\" />";
+      }
+      echo "<div class=\"right\">
         <h2>" . $article['titre'] . "</h2>
         <h5>" . $article['date'] . "</h5>
         <p class=\"accroche\"> "
@@ -55,12 +42,21 @@ $sessionUser = $user_model->getUser($_SESSION['id']);
 
     ". $article['texte1'] . "
 
-    </p>
+    </p>";
 
-    <div class=\"images\">
-      <img class=\"img1\" src=\"./img/" . $article['photo2'] . "\" />
-      <img class=\"img1\" src=\"./img/" . $article['photo3'] . "\" />
-    </div>
+    if ($article['photo2'] !== "" || $article['photo3'] !== ""){
+
+  echo  "<div class=\"images\">";
+
+  if ($article['photo2'] !== "") {
+    echo "  <img class=\"img1\" src=\"./img/" . $article['photo2'] . "\" />";
+  }if ($article['photo3'] !== "") {
+      echo "<img class=\"img1\" src=\"./img/" . $article['photo3'] . "\" />
+    </div>";
+
+  }}
+
+    echo "
     <p class=\"texte2\">
 
     ". $article['texte2'] . "
@@ -72,45 +68,19 @@ $sessionUser = $user_model->getUser($_SESSION['id']);
     ". $article['signature'] . "
 
     </span>
-  </div>
+  </div></div>
 
   ";
   ?>
 
-  <div class="comments">
+<div class="color1">
+
+  <div class="comments" ">
     <h2> Commentaires : </h3>
-  <?php
-  foreach ($comments as $comment) {
 
-
-    $user = $user_model-> getUser($comment['user_id']);
-
-
-    if (isset($_SESSION['id']) && isset($_SESSION['id']) && $_SESSION['id'] === $user['id'] || isset($_SESSION['id']) && $sessionUser['isAdmin'] == 1){
-      echo "<a href=\"./controllers/deleteComment.php?id=".$comment['id']. "&article_id=". $article['id'] . "\"><button > X </button> </a>";
-      echo "<a href=\"modifyComment.php?id=".$comment['id']. "&article_id=". $article['id'] . "\"><button > modify </button> </a>";
-    }
-
-  echo "<div class=\"comment\">
-
-  <h4 class=\"commentAuthor\">". $user['pseudo'] . "</h4>
-  <p class=\"commentContent\">" .
-  $comment['content'] ."
-</p>
-
-</div>";
-
-  }
-  ?>
+      <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="350px" data-numposts="10"></div>
 </div>
-
-<form class="commentForm" action="./controllers/submitComment.php" method="post">
-  <textarea name="content"> </textarea>
-  <input type="hidden" name="article_id" value ="<?php echo $article['id']; ?>"/>
-  <input type="submit" />
-</form>
-
-
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>
