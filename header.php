@@ -90,8 +90,7 @@ require "config.php";
         </div>
     </header>
   <p>
-    Bonjour et bienvenue sur mon blog !
-  </p>
+TEST  </p>
 
   <a  href="#go" class="headerMore"><p> Allons-y !</p></a>
 
