@@ -9,14 +9,14 @@ html,body {
 header {
     width: 100%;
     text-align: center;
-    padding-top: 15px;
+    display: flex;
+    justify-content:space-around;
+    align-content: center;
 }
 
 h1 {
-    width: 800px;
+    width: 520px;
     font-size: 85px;
-    display: inline-block;
-    margin: auto;
     font-family: "Amatic SC", serif;
     color: white;
 }
@@ -26,12 +26,21 @@ h1:active {
     top: 3px;
 }
 
+#buttonMenu, #closeMenu {
+  border: none;
+  background: none;
+	color: white;
+  cursor: pointer;
+  font-size: 25px;
+  }
+
+
 .adminMenu {
   width: 502px;
-  float: left;
+  height: 50px;
   background-color: black;
-  text-align: left;
   padding: 0 10px;
+  margin-top: 90px;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -44,32 +53,6 @@ h1:active {
   padding: 10px;
   border-radius: 5px;
   font-weight: bold;
-}
-
-.icones {
-    vertical-align: bottom;
-    width: 350px;
-    display: inline-block;
-}
-
-.icones .fa, .icones2 .fa {
-    padding: 15px;
-    font-size: 25px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    margin: 12px;
-}
-
-.icones .fa:active, .icones2.fa:active, .icones3 .fa:active {
-    position: relative;
-    top: 5px;
-}
-
-.icones a, .icones2 a {
-    text-decoration: none;
-    color: white;
-
 }
 
 header a {
@@ -177,14 +160,6 @@ padding: 0;
   padding: 25px;
 }
 
-#buttonMenu, #closeMenu {
-  border: none;
-  background: none;
-	color: white;
-  cursor: pointer;
-  font-size: 25px;
-}
-
 #submitLogin:hover, .admin:hover, .splashinfos .filter .headerMore p:hover, .nav a:hover, .nav2 a:hover, #buttonMenu:hover, #closeMenu:hover, header a:hover {
   color : rgba(255,255,255,0.7);
   transition: color linear 0.2s;
@@ -286,8 +261,14 @@ top: 3px;
   text-align: justify;
 }
 
+.indexTitle {
+  width: 525px;
+  margin: 0 auto;
+  float: right;
+}
+
 .top h2, .top h5 {
-  margin: 0;
+  margin: 0 ;
 }
 
 .texte1, .texte2 {
@@ -299,6 +280,7 @@ top: 3px;
   width: 850px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .images img {
@@ -403,31 +385,9 @@ footer {
     margin-top: 250px;
 }
 
-.end {
-    margin: auto;
-    width: 630px;
-}
-
 footer p {
-    width: 360px;
-    display: inline-block;
-    font-size: 10px;
-    padding : 5px;
-    margin-left: 50px;
-}
-
-footer .icones3{
-    display: inline-block;
-    width: 200px;
+    font-size: 18px;
+    padding : 20px 0;
+    margin: 0 auto;
     text-align: center;
-    color: white;
-}
-
-.icones3 .fa {
-    text-align: center;
-    font-size: 20px;
-    width: 15px;
-    height: 15px;
-    margin: 15px;
-    color: white;
 }

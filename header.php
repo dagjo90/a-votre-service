@@ -13,7 +13,7 @@ require "config.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="style.css" type="text/css" rel="stylesheet">
-	<title>À votre service</title>
+	<title>Madame Prudence</title>
 
   <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
@@ -67,33 +67,16 @@ require "config.php";
          $user_model = new User();
          $sessionUser = $user_model->getUser($_SESSION['id']);
          echo "<div class=\"adminMenu\">";
-
-
          echo "<span >" .$sessionUser['pseudo'] . " | </span>
          <a href=\"./controllers/logOut.php\" class=\"openMenu admin\">Déconnexion | </a>";
-
-       }
-
-       if (isset($_SESSION['id']) && $sessionUser['isAdmin'] == 1) {
          echo "<a href=\"articleForm.php\" class=\"openMenu admin\">Ajouter un article</a>";
          echo "</div>";
        }
-
       ?>
-    	<h1><a href="./index.php" title="Retourner à la page d'accueil">À votre service</a></h1>
-    <div class="icones">
-        <a href="https://www.instagram.com/"  title="Afficher le compte Instagram"class="fa fa-instagram" target="_blank"></a>
-        <a href="https://www.youtube.com/" title="Afficher la chaine Youtube" class="fa fa-youtube-play" target="_blank"></a>
-        <a href="https://www.facebook.com" title="Afficher la page Facebook" class="fa fa-facebook" target="_blank"></a>
+    	<h1><a href="./index.php" title="Retourner à la page d'accueil">Madame Prudence</a></h1>
         <button id="buttonMenu" title="Afficher le menu">Menu</button>
-
-        </div>
     </header>
-  <p>
-TEST  </p>
-
-  <a  href="#go" class="headerMore"><p> Allons-y !</p></a>
-
+  <p>Site en construction </p>
   </div>
 </div>
 

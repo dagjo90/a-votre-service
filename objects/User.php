@@ -68,17 +68,17 @@ class User extends Model {
 
       if(!$resultat)
       {
-          echo 'Mauvais identifiant ou mot de passe 1!';
+          echo 'Mauvais identifiant ou mot de passe !';
       }
       else {
           if(password_verify( $psw, $resultat['password'])){
           session_start();
               $_SESSION['id'] = $resultat['id'];
               $_SESSION['email'] = $email;
-              echo "ok";
+
           }
           else {
-              echo 'Mauvais identifiant ou mot de passe 2';
+              echo 'Mauvais identifiant ou mot de passe ';
           }
       }
       }

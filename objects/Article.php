@@ -2,7 +2,7 @@
 
 class Article extends Model {
 
-  public function createArticle($photo1, $titre, $tags, $accroche, $texte1, $photo2, $photo3, $texte2,$type) {
+  public function createArticle($photo1, $titre,$date, $tags, $accroche, $texte1, $photo2, $photo3, $texte2,$type) {
     if ($this -> connectDB) {
       try {
         $sql = 'INSERT INTO articles
@@ -12,14 +12,14 @@ class Article extends Model {
         $pdoStmnt -> execute ( [
           $photo1,
           $titre,
-          date("Y-m-d"),
+          $date,
           $tags,
           $accroche,
           $texte1,
           $photo2,
           $photo3,
           $texte2,
-          "Ann-so.",
+          "Madame Prudence.",
           $type,
         ]);
         return true;
@@ -85,7 +85,7 @@ class Article extends Model {
 
 
 
-  public function updateArticle ($id, $photo1, $titre, $tags, $accroche, $texte1, $photo2, $photo3, $texte2) {
+  public function updateArticle ($id, $photo1, $titre,$date, $tags, $accroche, $texte1, $photo2, $photo3, $texte2) {
 
 
       if ( $this -> connectDB ) {
@@ -97,7 +97,7 @@ class Article extends Model {
               $pdoStmnt -> execute( [
                 $photo1,
                 $titre,
-                date("Y-m-d"),
+                $date,
                 $tags,
                 $accroche,
                 $texte1,
