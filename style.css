@@ -1,39 +1,36 @@
-html,body {
-  margin : 0;
+html, body {
+  margin: 0;
   padding: 0;
 }
 
-
 /* header */
-
 header {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content:space-around;
-    align-content: center;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
 }
 
 h1 {
-    width: 520px;
-    font-size: 85px;
-    font-family: "Amatic SC", serif;
-    color: white;
+  width: 520px;
+  font-size: 85px;
+  font-family: "Amatic SC", serif;
+  color: white;
 }
 
 h1:active {
-    position: relative;
-    top: 3px;
+  position: relative;
+  top: 3px;
 }
 
 #buttonMenu, #closeMenu {
   border: none;
   background: none;
-	color: white;
+  color: white;
   cursor: pointer;
   font-size: 25px;
-  }
-
+}
 
 .adminMenu {
   width: 502px;
@@ -47,7 +44,7 @@ h1:active {
 
 .adminArticle {
   width: 400px;
-  margin-top : 25px;
+  margin-top: 25px;
   margin-left: 25px;
   background-color: black;
   padding: 10px;
@@ -56,28 +53,25 @@ h1:active {
 }
 
 header a {
-color: white;
+  color: white;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-
+  text-decoration: none;
+  color: black;
 }
 
 /*Main page */
-
 .splashinfos {
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("./img/splash.jpg");
-
 }
 
 .splashinfos .filter {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   font-family: "News cycle", serif;
@@ -85,16 +79,17 @@ a {
 
 .splashinfos .filter p {
   text-align: center;
-  width: 500px;
+  width: 800px;
   color: white;
-  padding-top: 10%;
+  padding-top: 5%;
   margin: 0 auto;
   font-family: "News cycle", serif;
-  letter-spacing: 4px;
-  font-size: 45px;
+  letter-spacing: 3px;
+  font-size: 35px;
+  line-height: 50px;
 }
 
-.admin, .adminMenu span{
+.admin, .adminMenu span {
   font-size: 25px;
   color: white;
   font-family: "News cycle", serif;
@@ -114,7 +109,6 @@ a {
   position: fixed;
   right: -400px;
   z-index: 1;
-
 }
 
 .nav2 {
@@ -134,23 +128,24 @@ a {
   font-family: "News Cycle", serif;
 }
 
-.nav h3, .nav2 h3, .nav h3 a, .nav2 h3 a{
+.nav h3, .nav2 h3, .nav h3 a, .nav2 h3 a {
   padding: 0;
   margin: 0;
   margin-top: 10px;
 }
+
 .nav ul, .nav2 ul {
-list-style: none;
-width: 300px;
-margin : 10px auto;
-padding: 0;
+  list-style: none;
+  width: 300px;
+  margin: 10px auto;
+  padding: 0;
 }
 
-.nav a, .nav2 a{
+.nav a, .nav2 a {
   color: white;
   text-decoration: none;
-
 }
+
 .navContainer h4 {
   margin-top: 50px;
 }
@@ -161,44 +156,29 @@ padding: 0;
 }
 
 #submitLogin:hover, .admin:hover, .splashinfos .filter .headerMore p:hover, .nav a:hover, .nav2 a:hover, #buttonMenu:hover, #closeMenu:hover, header a:hover {
-  color : rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   transition: color linear 0.2s;
   transition: transform linear 0.3s;
   transform: scale(1.3);
 }
 
-#submitLogin:active, .admin:active, .splashinfos .filter .headerMore p:active , .nav a:active, .nav2 a:active, #buttonMenu:active, #closeMenu:active, header a:active {
-position: relative;
-top: 3px;
-
+#submitLogin:active, .admin:active, .splashinfos .filter .headerMore p:active, .nav a:active, .nav2 a:active, #buttonMenu:active, #closeMenu:active, header a:active {
+  position: relative;
+  top: 3px;
 }
 
 .main a {
   text-decoration: none;
   width: 95px;
   box-shadow: none;
-
-
 }
-
-.splashinfos .filter .headerMore p {
- padding-top: 0;
- margin-top: 100px;
- background-color: #F7A24D;
- padding: 10px 0;
- border-radius: 5px;
- width: 150px;
- text-align: center;
- font-size: 20px;
-}
-
 
 .more {
-  width : 104px;
+  width: 104px;
   padding: 10px;
-  border-radius : 3px;
+  border-radius: 3px;
   background-color: black;
-  color : white;
+  color: white;
   margin: 50px auto;
   border-radius: 5%;
   letter-spacing: 3px;
@@ -208,7 +188,6 @@ top: 3px;
 .main a:hover, .more:hover {
   transition: transform linear 0.3s;
   transform: scale(1.1);
-
 }
 
 .main a:active {
@@ -217,7 +196,6 @@ top: 3px;
 }
 
 .color1, .color2 {
-
   padding: 250px 0;
   -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
   clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
@@ -225,11 +203,10 @@ top: 3px;
 
 .color1 {
   background-color: #232830;
-  color : silver;
+  color: silver;
 }
 
 /*article*/
-
 .main {
   width: 100%;
 }
@@ -268,7 +245,7 @@ top: 3px;
 }
 
 .top h2, .top h5 {
-  margin: 0 ;
+  margin: 0;
 }
 
 .texte1, .texte2 {
@@ -276,7 +253,7 @@ top: 3px;
 }
 
 .images {
-  margin : 50px auto;
+  margin: 50px auto;
   width: 850px;
   display: flex;
   justify-content: space-between;
@@ -293,10 +270,9 @@ top: 3px;
 }
 
 /* commentaires */
-
 .comments {
   width: 900px;
-  margin : 50px auto;
+  margin: 50px auto;
   background-color: white;
   padding: 25px;
   border: 2px solid silver;
@@ -308,14 +284,13 @@ top: 3px;
 }
 
 /*Formulaire article*/
-
 .articleForm {
   margin: 100px auto;
   width: 900px;
   text-align: center;
 }
 
-.articleForm input, .articleForm textarea  {
+.articleForm input, .articleForm textarea {
   width: 600px;
   margin: 20px auto;
   min-height: 50px;
@@ -326,11 +301,11 @@ top: 3px;
   padding: 0;
 }
 
-.articleForm textarea  {
+.articleForm textarea {
   width: 620px;
   box-sizing: border-box;
   border: 2px solid #C6C6C6;
-  padding : 10px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #FBFBFB;
   resize: none;
@@ -340,10 +315,7 @@ top: 3px;
   height: 300px;
 }
 
-
 /* Page Login */
-
-
 .loginForm {
   width: 500px;
   margin: 150px auto;
@@ -352,7 +324,7 @@ top: 3px;
 
 .loginForm input {
   width: 500px;
-  margin : 10px auto;
+  margin: 10px auto;
   height: 50px;
   font-family: "Amatic SC", serif;
   font-size: 30px;
@@ -377,17 +349,89 @@ top: 3px;
 }
 
 /*footer*/
-
 footer {
-    background-color: black;
-    color: white;
-    width: 100%;
-    margin-top: 250px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  margin-top: 250px;
 }
 
 footer p {
-    font-size: 18px;
-    padding : 20px 0;
-    margin: 0 auto;
-    text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .splashinfos .filter p {
+    width: 500px;
+  }
+
+  .article {
+    width: 500px;
+    margin: 0;
+  }
+
+  .top {
+    width: 500px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .comments {
+    width: 600px;
+  }
+
+  .images {
+    margin: 50px auto;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .images img {
+    width: 260px;
+    margin-bottom: 50px;
+  }
+
+  .nav {
+    color: white;
+    height: 100%;
+    background-color: black;
+    display: none;
+    z-index: 1;
+  }
+
+  header {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .splashinfos {
+    height: 1000px;
+    width: 100vh;
+  }
+
+  .indexTitle {
+    float: none;
+    margin: 0;
+  }
+
+  .more {
+    margin: 0;
+  }
+
+  h1 {
+    width: 400px;
+  }
 }

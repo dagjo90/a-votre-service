@@ -20,26 +20,32 @@ foreach($articles as $article) {
 
   echo "
 		<div class=\"article\">
+    <div class='indexTitle'>
+    <h2>" . $article['titre'] . "</h2>
+    <h5>" . $date = date("d/m/Y",strtotime($article['date'])) . "</h5>
+    </div>
 		<div class=\"top\">";
+
     if ($article['photo1'] !== "") {
-      echo "<img class=\"img1\" src=\"./img/" . $article['photo1'] . "\" />";
+			echo "<img class=\"img1\" src=\"./img/" . $article['photo1'] . "\" />";
     }
-		echo "	<div class=\"right\">
-				<h2>" . $article['titre'] . "</h2>
-				<h5>" . $article['date'] . "</h5>
+
+		echo	"<div class=\"right\">
+
 				<p class=\"accroche\"> "
           . $article['accroche'] . "
           </p>
 
-					<a  href=\"./article.php?id=".$article['id'] . "\"><p class=\"more\"> Lire plus </p></a>
 			</div>
+
 		</div>
+    <a  href=\"./article.php?id=".$article['id'] . "\"><p title=\"Afficher l'article\" class=\"more\"> Lire plus </p></a>
 
-	</div>";
+	</div>
 
-  echo "</div>";
-  $n++;
-
+";
+echo "</div>";
+$n++;
 }
 
 

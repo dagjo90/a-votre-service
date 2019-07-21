@@ -76,7 +76,7 @@ require "config.php";
     	<h1><a href="./index.php" title="Retourner à la page d'accueil">Madame Prudence</a></h1>
         <button id="buttonMenu" title="Afficher le menu">Menu</button>
     </header>
-  <p>Site en construction </p>
+  <p>Vous aimez les centres d'appels surchargés, les musiques d'attente interminables et les standardistes écervelées ?<br /> Vous allez m'adorer !</p>
   </div>
 </div>
 
