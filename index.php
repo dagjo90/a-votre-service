@@ -4,6 +4,11 @@ include "header.php";
 
 
 <?php
+if (isset($_GET['mail'])) {?>
+
+  <script>alert('message envoyé !');</script>
+  <?php
+}
 $n = 1;
 foreach($articles as $article) {
 
@@ -21,7 +26,6 @@ foreach($articles as $article) {
 		<div class=\"article\">
     <div class='indexTitle'>
     <h2>" . $article['titre'] . "</h2>
-    <h5>" . $date = date("d/m/Y",strtotime($article['date'])) . "</h5>
     </div>
 		<div class=\"top\">";
 

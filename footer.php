@@ -1,5 +1,5 @@
 <footer>
-		<p>Madame Prudence &copy; <?php echo date('Y'); ?></p>
+		<p>Madame Prudence &copy; <?php echo date('Y'); ?> info@madameprudence.be</p>
 </footer>
 </div>
 

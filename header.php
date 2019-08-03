@@ -53,7 +53,7 @@ require "config.php";
   ?>
 </ul>
 <a href="" title="Afficher la page de présentation"><h3>À propos de moi</h3></a>
-<a href="" title="Afficher la page de contact"><h3>Contact</h3></a>
+<a href="./contact.php" title="Afficher la page de contact"><h3>Contact</h3></a>
 <a href="./register.php" title="Se connecter en tant qu'administrateur"><h4>Mode Administrateur</h4></a>
 </div>
 

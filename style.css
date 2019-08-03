@@ -120,6 +120,7 @@ a {
   position: fixed;
   right: 0px;
   z-index: 1;
+  overflow: scroll;
 }
 
 .navContainer {
@@ -155,14 +156,14 @@ a {
   padding: 25px;
 }
 
-#submitLogin:hover, .admin:hover, .splashinfos .filter .headerMore p:hover, .nav a:hover, .nav2 a:hover, #buttonMenu:hover, #closeMenu:hover, header a:hover {
+.contactButton:hover, #submitLogin:hover, .admin:hover, .splashinfos .filter .headerMore p:hover, .nav a:hover, .nav2 a:hover, #buttonMenu:hover, #closeMenu:hover, header a:hover {
   color: rgba(255, 255, 255, 0.7);
   transition: color linear 0.2s;
   transition: transform linear 0.3s;
   transform: scale(1.3);
 }
 
-#submitLogin:active, .admin:active, .splashinfos .filter .headerMore p:active, .nav a:active, .nav2 a:active, #buttonMenu:active, #closeMenu:active, header a:active {
+.contactButton:active, #submitLogin:active, .admin:active, .splashinfos .filter .headerMore p:active, .nav a:active, .nav2 a:active, #buttonMenu:active, #closeMenu:active, header a:active {
   position: relative;
   top: 3px;
 }
@@ -316,13 +317,13 @@ a {
 }
 
 /* Page Login */
-.loginForm {
+.loginForm,.contactForm {
   width: 500px;
   margin: 150px auto;
   font-family: "Amatic SC", serif;
 }
 
-.loginForm input {
+.loginForm input, .contactForm input {
   width: 500px;
   margin: 10px auto;
   height: 50px;
@@ -331,7 +332,18 @@ a {
   font-weight: bold;
 }
 
-#submitLogin {
+.contactForm textarea {
+  width: 515px;
+  height: 300px;
+  box-sizing: border-box;
+  border: 2px solid #C6C6C6;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  resize: none;
+}
+
+#submitLogin, .contactButton {
   text-decoration: none;
   box-shadow: none;
   border: none;
@@ -370,11 +382,12 @@ footer p {
   }
 
   .splashinfos .filter p {
-    width: 500px;
-  }
-
-  .article {
-    width: 500px;
+    text-align: center;
+    width: 50%;
+    letter-spacing: 2px;
+    font-size: 30px;
+    line-height: 40px;
+    padding : 5%;
     margin: 0;
   }
 
@@ -385,13 +398,33 @@ footer p {
     margin: 0;
   }
 
+
+  .article {
+    width: 100vh;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 90vh;
+  }
+
+  .right {
+    width: 50%;
+  }
+
   .comments {
     width: 600px;
   }
 
   .images {
     margin: 50px auto;
-    width: 600px;
+    width: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: space-between;
@@ -407,18 +440,25 @@ footer p {
   .nav {
     color: white;
     height: 100%;
+    width: 100vh;
+    right: 0;
     background-color: black;
     display: none;
     z-index: 1;
+  }
+  .nav2 {
+    width: 100vh;
   }
 
   header {
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content:center;
+    align-content:flex-start;
   }
 
   .splashinfos {
-    height: 1000px;
+    height: 100vh;
     width: 100vh;
   }
 
@@ -432,6 +472,22 @@ footer p {
   }
 
   h1 {
-    width: 400px;
+    width: 50%;
+  }
+
+  .texte1, .texte2 {
+    width: 50%;
+  }
+
+  .comments {
+    width: 45%;
+    margin: 0;
+  }
+
+  .fb-comments {
+  width: 50%;
+  }
+  .signature {
+float: left;
   }
 }
