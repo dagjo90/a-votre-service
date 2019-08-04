@@ -32,6 +32,12 @@ h1:active {
   font-size: 25px;
 }
 
+#closeMenu:hover {
+  transition: transform 0.9s ease, color 0.2s linear;
+  color: #e74c3c;
+  transform: rotate(540deg);
+}
+
 .adminMenu {
   width: 502px;
   height: 50px;
@@ -156,7 +162,7 @@ a {
   padding: 25px;
 }
 
-.contactButton:hover, #submitLogin:hover, .admin:hover, .splashinfos .filter .headerMore p:hover, .nav a:hover, .nav2 a:hover, #buttonMenu:hover, #closeMenu:hover, header a:hover {
+.contactButton:hover, #submitLogin:hover, .admin:hover, .splashinfos .filter .headerMore p:hover, .nav a:hover, .nav2 a:hover, #buttonMenu:hover, header a:hover {
   color: rgba(255, 255, 255, 0.7);
   transition: color linear 0.2s;
   transition: transform linear 0.3s;
@@ -170,20 +176,21 @@ a {
 
 .main a {
   text-decoration: none;
-  width: 95px;
+  width: 150px;
   box-shadow: none;
+  text-align: center;
 }
 
 .more {
   width: 104px;
   padding: 10px;
-  border-radius: 3px;
   background-color: black;
   color: white;
   margin: 50px auto;
-  border-radius: 5%;
+  border-radius: 5px;
   letter-spacing: 3px;
   font-weight: bold;
+  text-align: center;
 }
 
 .main a:hover, .more:hover {
@@ -317,13 +324,13 @@ a {
 }
 
 /* Page Login */
-.loginForm,.contactForm {
+.loginForm, .contactForm {
   width: 500px;
   margin: 150px auto;
   font-family: "Amatic SC", serif;
 }
 
-.loginForm input, .contactForm input {
+.loginForm input, .contactForm input[type='text'] {
   width: 500px;
   margin: 10px auto;
   height: 50px;
@@ -343,7 +350,37 @@ a {
   resize: none;
 }
 
-#submitLogin, .contactButton {
+.contactfooter {
+  width: 345px;
+  margin: 50px auto;
+}
+
+.contactButton {
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 0 50px;
+  cursor: pointer;
+}
+
+.success {
+  margin: 0 auto;
+  background-color: #2ecc71;
+}
+
+.danger {
+  background-color: #e74c3c;
+}
+
+#submitLogin {
   text-decoration: none;
   box-shadow: none;
   border: none;
@@ -377,117 +414,190 @@ footer p {
 
 @media screen and (max-width: 1000px) {
   * {
+    overflow: hidden;
+  }
+
+  html, body {
     padding: 0;
     margin: 0;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  header h1 {
+    max-width: 360px;
+    margin: 10px auto;
+  }
+
+  .splashinfos {
+    height: 700px;
+    width: 100%;
   }
 
   .splashinfos .filter p {
     text-align: center;
-    width: 50%;
+    width: 340px;
     letter-spacing: 2px;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 40px;
-    padding : 5%;
-    margin: 0;
+    padding: 10px;
+    margin: 10px auto;
   }
 
-  .top {
-    width: 500px;
+  header {
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0;
+    align-content: space-between;
+    height: 300px;
   }
-
 
   .article {
-    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 330px;
     margin: 0 auto;
     line-height: 30px;
     font-size: 20px;
   }
 
+  .indexTitle {
+    width: 320px;
+    margin: 20px auto;
+    line-height: 40px;
+    text-align: center;
+  }
+
   .top {
-    display: flex;
-    justify-content: space-around;
+    width: 300px;
     flex-direction: column;
-    align-items:flex-start;
-    width: 90vh;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .accroche {
+    overflow: hidden;
+  }
+
+  .img1 {
+    width: 290px;
+    margin: 20px auto;
   }
 
   .right {
-    width: 50%;
+    width: 290px;
+    margin: 20px auto;
   }
 
-  .comments {
-    width: 600px;
+  .main a {
+    width: 150px;
+    border-radius: 0;
   }
 
-  .images {
-    margin: 50px auto;
-    width: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .images img {
-    width: 260px;
-    margin-bottom: 50px;
-  }
-
-  .nav {
-    color: white;
-    height: 100%;
-    width: 100vh;
-    right: 0;
-    background-color: black;
-    display: none;
-    z-index: 1;
-  }
-  .nav2 {
-    width: 100vh;
-  }
-
-  header {
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content:center;
-    align-content:flex-start;
-  }
-
-  .splashinfos {
-    height: 100vh;
-    width: 100vh;
-  }
-
-  .indexTitle {
-    float: none;
-    margin: 0;
+  .article a {
+    margin: 10px auto;
+    text-align: center;
   }
 
   .more {
+    width: auto;
     margin: 0;
-  }
-
-  h1 {
-    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
   }
 
   .texte1, .texte2 {
-    width: 50%;
+    width: 290px;
+    margin: 10px auto;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .images img {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .color1, .color2 {
+    padding: 100px 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   .comments {
-    width: 45%;
-    margin: 0;
+    width: 300px;
+    margin: 0 auto;
   }
 
   .fb-comments {
-  width: 50%;
+    width: 290px;
+    margin: 0 auto;
   }
-  .signature {
-float: left;
+
+  .signature, .socialButtons {
+    margin-top: 20px;
+    text-align: right;
   }
+
+  .loginForm, .contactForm {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .loginForm input, .contactForm input[type='text'] {
+    width: 290px;
+    margin: 10px auto;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .contactForm textarea {
+    width: 290px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 5px;
+
+  }
+
+  .contactfooter {
+    width: 290px;
+    margin: 50px auto;
+  }
+
+  .contactButton {
+    padding: 10px 30px;
+    margin: 10px 10px;
+  }
+
+  .nav2 {
+    width: 100%;
+  }
+
+  .navContainer {
+    width: 250px;
+    margin: 50px auto;
+  }
+
+  .nav h3, .nav2 h3, .nav h3 a, .nav2 h3 a {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .nav2 a {
+    font-size: 20px;
+    line-height: 50px;
+  }
+
 }

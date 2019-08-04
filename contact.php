@@ -8,8 +8,10 @@ include "header.php";
   <input name="email" type="text" placeholder="Votre email" />
   <input name="sujet" type="text" placeholder="Sujet" />
   <textarea name="contenuMail" placeholder="Message"></textarea>
-  <input class="contactButton" type="submit" value="Envoyer"/> <input type="reset" class="contactButton" value="Effacer">
-</form>
+  <div class="contactfooter">
+
+  <input class="contactButton success" type="submit" value="Envoyer"/> <input type="reset" class="contactButton danger" value="Effacer">
+</div></form>
 
 <?php
 include "footer.php";

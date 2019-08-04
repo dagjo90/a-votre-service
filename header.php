@@ -13,7 +13,17 @@ require "config.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="style.css" type="text/css" rel="stylesheet">
-	<title>Madame Prudence</title>
+<?php
+if (isset($_GET['id'])) {
+  $id = $_GET['id'];
+  $article_model = new Article();
+  $article = $article_model-> getArticle($id);
+echo "<title>".$article['titre']."</title>";
+} else {
+  echo "<title>Madame Prudence</title>";
+}
+?>
+
 
   <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">

@@ -1,15 +1,11 @@
-<?php
-include "header.php";
-?>
 
   <?php
+  include "header.php";
   $id = $_GET['id'];
 
   $article_model = new Article();
   $article = $article_model-> getArticle($id);
 
-  $comment_model = new Comment();
-  $comments = $comment_model->getAllCommentsFromArticle($id);
 
   if (isset($_SESSION['id']) && $sessionUser['isAdmin'] == 1) {
     echo "<div class=\"adminArticle\">";
@@ -31,7 +27,6 @@ include "header.php";
       }
       echo "<div class=\"right\">
         <h2>" . $article['titre'] . "</h2>
-        <h5>" . $article['date'] . "</h5>
         <p class=\"accroche\"> "
           . $article['accroche'] . "
           </p>
@@ -68,17 +63,21 @@ include "header.php";
     ". $article['signature'] . "
 
     </span>
-  </div></div>
+  ";?>
 
-  ";
-  ?>
+<div class="socialButtons">
+  <div class="fb-like" data-href="http://madameprudence.be/article.php?id=<?php echo $id ?>" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+  <div class="fb-share-button" data-href="http://madameprudence.be/article.php?id=<?php echo $id ?>" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmadameprudence.be%2Farticle.php%3Fid%3D<?php echo $id?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager</a></div>
+</div>
+</div>
+</div>
+
 
 <div class="color1">
-
-  <div class="comments" ">
+  <div class="comments">
     <h2> Commentaires : </h3>
 
-      <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="350px" data-numposts="10"></div>
+      <div class="fb-comments" data-href="http://madameprudence.be/article.php?id=<?php echo $id?>" data-width="350px" data-numposts="10"></div>
 </div>
 </div>
 <?php
